@@ -28,7 +28,7 @@ namespace WebApplication1.Controllers.Tests
         public void WaitTest()
         {
             var result = _controller.Wait();
-            Assert.IsInstanceOfType(result, typeof(ViewResult));
+            Assert.IsInstanceOfType(result, typeof(JsonResult));
         }
 
         [TestMethod()]
@@ -42,7 +42,7 @@ namespace WebApplication1.Controllers.Tests
         public void ErrorTest()
         {
             var result = _controller.Error();
-            Assert.Fail();
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
         }
     }
 }
