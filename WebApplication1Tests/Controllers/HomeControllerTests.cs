@@ -42,7 +42,7 @@ namespace WebApplication1.Controllers.Tests
         public void ErrorTest()
         {
             var result = _controller.Error();
-            Assert.IsInstanceOfType(result, typeof(JsonResult));
+            Assert.IsInstanceOfType(result, typeof(ViewResult));
         }
     }
 }
